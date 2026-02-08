@@ -2,7 +2,8 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
+
 const filePath = path.join(__dirname, "data.json");
 
 const server = http.createServer((req, res) => {
